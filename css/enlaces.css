@@ -1,0 +1,42 @@
+/*Exixten 4 estados de los enlaces:
+	1. Cuando son presionados:-------------------------------------------a:visited; ;
+	2. Cuando no han sido presionados:--------------> a:link;
+	3. cuando pasamos el mouse sobre el enlace:----------------->a:hover; ;
+	4. Cuando han sido presionados en el instante:----------------------------------a:active; */
+
+a{
+	font-size: 20px;
+	text-decoration: underline;
+	padding: 10px 20px; /*Espaciado Arriba, Espaciado Izquierda y derecha*/
+	margin: 10px 10px 10px 10px; /*Arriba, Derecha, Abajo, Izquierdo*/
+	display: inline-block; /*Convertir elementos inline a bloques*/
+	color: white;
+	background:#2488D1;
+	box-shadow: 5px 5px 0px 0px #122C56; /*Derecha, abajo, sombreado, TodoBorde, color*/
+}
+
+a:hover{
+	/*text-decoration: underline;
+	font-size: 30px;
+	background: grey;
+	color: white;*/
+	box-shadow: 3px 3px 0px 0px #122C56; /*Derecha, abajo, sombreado, TodoBorde, color*/
+}
+
+a:active {
+	text-transform: uppercase;
+	background: orange;*/
+	box-shadow: none;	
+}
+
+a:link{
+	color: red;
+}
+
+/*a:visited{
+	color: green;
+}*/
+
+
+
+

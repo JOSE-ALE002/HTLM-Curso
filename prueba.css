@@ -1,0 +1,41 @@
+/*NOTAS
+1. SI CONERTIMOS UN BLOCK A INLINE, PARA QUE SE VEA EL EFECTO TAMBIEN ESE DEBE SER INLINE DE LO CONTRARIO 
+CONSERVARA SU POSICION
+2. AI TENEMOS UN BLOQUE ARRIBA Y UN INLINE ABAJO ESTOS SE UNEN
+*/
+
+.box{
+	width: 150px;
+	height: 150px;
+	background: green;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+#c{
+	background: purple;
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+}
+
+.enlace{
+	display: block;
+}
+
+#caja{
+	background: orange;
+	width: 200px;
+	height: 200px;
+	float: right;
+}
+
+.padre{
+	width: 50%;
+	height: 50%;
+	margin: auto;
+	background: black;
+	color: white;
+	position: relative;
+}

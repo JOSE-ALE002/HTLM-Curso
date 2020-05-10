@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<style>
+	#principal p:first-child{
+		background: violet;
+	}
+</style>
+<body>
+	<div id="principal">
+		<p>Lorem ipsum dolor.</p>
+		<p>Lorem ipsum dolor.</p>
+	</div>
+
+	<script>
+		var principal = document.querySelectorAll("#principal p");
+		
+		function eventos(){
+			for(var i = 0; i < principal.length; i++){
+				 principal[i].addEventListener("click", function(){
+					console.log("Hola Mundo");
+				});
+			}
+		}
+
+		eventos();
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+p{
+	color: rgba(0,0,0,.5); /*cambio en la opacidad del texto*/
+	font-family: "Times new roman"; /*Tipo de letra*/
+	font-size: 20px;
+	font-weight: bold;  /*Negrita o "normal"*/
+	text-align: justify; /*Alineado del texto*/
+	line-height: 25px; /*Sangria del texto*/
+	text-decoration: underline; /*Susrayado tambien usamos "none", "Overline", line-through que es tachado*/
+	text-transform:capitalize; ;/*Capitalize: Primera mayuscula. Upercase: todo mayuscula, lowercase: todo minuscula*/
+	letter-spacing: normal; /*Espacio entre letras*/
+	word-spacing: 5px; /*Espacio entre palabras*/
+	text-shadow: .5px .5px .5px black; /* Sombras en texto*/
+}
+
+h1{
+	font-weight: normal;
+	text-align: center;
+	background: grey;
+}
+

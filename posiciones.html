@@ -1,0 +1,76 @@
+<!--                                              POSICIONES
+* STATIC
+	* Posicion por defecto dada por el HTML
+	* Los elementos se posicionan unica y exclusivamente con respecto al flujo del HTML
+	* Ignoran las propiedades: left, right, top, bottom
+	* No es posible mover o posicionarlo encima o debajo de otros elementos de ahi su nombre
+* RELATIVE
+	* Los elementos se posicionan de acuerdo al flujo HTML y el espacio resultante es ocupado
+	* Es posible utilizar las propiedades: left, right, bottom, top pero los valores van a ser de acuerdo a la posicion original dada por el html.
+	* Cualquier elemento hijo posicionado de modo "absolute" va a ser pocisionado con respecto al padre
+	* Se respeta el espacio brindado por el html deacuerdo a sus posiciones
+	* se respeta el Z-index
+* ABSOLUTE
+	* No se respeta el espacio brindado por el html deacuerdo a sus posiciones, sale del flujo HTML, su tamaño ya no afectara a otros elementos
+	* se respeta el Z-index
+	* Al quitar todas las propiedades del elemento este objeto por defecto ocuparia una posicion como la que le tendria sin el posicionamiento absolute, es decir por defecto. si podemos top: 0px, left:0px: esto seria tomado en cuenta con respecto a la pagina entera, podria ser movido por la pagina entera.
+	* Cualquier elemento hijo de un elemento: al ser el padre: relative y el hijo absolute este seria tomado en cuenta con respecto al padre es decir que podria ser posicionado entre las dimenciones que posea el padre.
+* FIXED
+	* se respeta el Z-index, siempre se va a respetar
+	* Puede ser usado en los chat como por ejemplo el de facebook
+
+* FLOAT----------que teoricamente no es una posicion
+	* Al aplicarse float a un elemento, esto afecta a todo lo que este abajo o lo que le siga al elemento.
+	* Propiedad Clear: both------------limpia los float y ubica abajo de otro que tenga float pero sin perder su float
+
+PROPIEDADES CLAVES
+* top
+* left
+* right
+* bottom
+* Z-index
+
+TIPOS DE ELEMENTOS
+* Elemento de bloques: cuadro de pixeles, se le es asignado la linea entera
+	*EJEMPLOS
+		* parrafos
+		* Div
+* Elemento inline: se le es asignado un espacio de acuerdo a sus proporciones
+	*EJEMPLOS
+		* enlaces
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Position</title>
+	<link rel="stylesheet" type="text/css" href="prueba.css">
+</head>
+<body>
+	<div class="padre">
+		<div class="box">
+			<p>Caja1</p>
+		</div>
+		<div id="c">
+			<p>caja2</p>
+		</div>
+		<hr>
+		<h2>Enlaces</h2>
+		<div id="caja">
+			<p>caja2</p>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>	
+	</div>
+</body>
+</html>

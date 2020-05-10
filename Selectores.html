@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estilos</title>
+</head>
+<style>
+	/*FORMAS DE DARLE ESTILO A ELEMENTOS ESPECIFICOS DE UNA CLASE*/
+	p.texto1{
+		font-size: 20px;
+		color: red;
+	}
+
+	h1.texto1{
+		background: grey;
+		color: white;
+		text-align: center;
+	}
+
+	a[href = "http://google.com"]{
+		text-decoration: none;
+		color: navy;
+	}
+	
+	/*Estilo aplicado a parrafos que su atributo name inicie con = "my"*/
+	p[name^="my"]{
+		color: green;
+	}
+
+	/*Estilo aplicado a parrafos que su atributo name finalize con = "my"*/
+	p[name$="my"]{
+		color: purple;
+	}
+
+	/*Estilo aplicado a parrafos que su atributo name contenga la palabra = "mi"*/
+	p[name*="mi"]{
+		color: blue;
+	}
+	
+
+	/*Da estilo a los hijos p que se encentren en #wrapper. 
+		nth:child-->Le da estilo al hijo en la posicion que le especifiquemos
+	En este caso le especificamos al "hijo" "parrafo(p)" que se encuentre en la posicion 2
+
+	pero podemos hacer esto: 
+		#wrapper :nth-child(2){
+			background: #999999;
+		}
+
+	Que se refiere a seleccionar al hijo en la posicion 2 que se encuentre en el padre #wrapper sin tomar en cuenta el tipo de elemento que sea que se encuentre esa posicion
+
+	Algunos valores que podemos darle a la pseudo-clase ntg:child() son: 
+		1. even ------>Le da estilo a todos los hijos en las posiciones pares;
+		1. odd ------>Le da estilo a todos los hijos en las posiciones impares;
+
+	Existen otras importantes pseudo clases relacionadas con esta última, como :
+		1. first-child----->Referencia solo el primer hijo
+		2. last-child ----->Referencia solo el último hijo
+		3. only-child ----->afecta un elemento siempre y cuando sea el único hijo disponible.
+
+	Algunas de ellas recientemente incorporadas. Estas pseudo clases en particular no requieren palabras clave o parámetros.
+
+	Otra importante pseudo clase llamada not() es utilizada realizar una negación:
+
+	A diferencia del selector universal utilizado previamente, la pseudo
+	clase not() nos permite declarar una excepción. Los estilos en la regla creada con esta pseudo
+	clase serán asignados a todo elemento excepto aquellos incluidos en la referencia entre
+	paréntesis. Examples:
+		
+		:not(p){
+			margin: 0px;
+		}
+
+	Se refiere a que asignará un margen de 0 pixeles a cada elemento del documento excepto los elementos <p> .
+
+		:not(.texto1){
+			font-size: 20px;
+		};
+
+	Se refiere a que asignará un tamaño de texto de 20px a cada elemento del documento excepto los elementos a la clase ".texto1" .
+
+	
+	*/
+	#wrapper p:last-child{
+		background: #999999;
+	}
+
+	/*Afecta al otro elemento <p> que le sigue al parrafo <p> con clase "letras"*/
+	p.letras + p{
+		background: violet;
+	}
+
+	/*Aplica Estilo a todo lo elementos p que esten despues de p.letras*/
+	p.letras1 ~ p{
+		background: navy;
+		color: white;
+	}
+</style>
+<body>
+	<h2>Estilo a los elementos p con clase "Texto1"</h2>
+	<p class="texto1">mi texto</p>
+	<p class="texto1">mi texto</p>
+
+
+	<h2>Estilo a los elementos "h1" con clase "Texto1"</h2>
+	<h1 class="texto1">Titulo</h1>
+
+	<h2>Estilo referenciando con cualquier  atributo</h2>
+
+	<a target="_blank" href="http://google.com">Enlace a google</a>
+
+	<span style=" display: inline-block; "><p>----Estilo aplicado con atributo href = "http://google.com"</p></span>
+
+	<h4>Estilo por name que inicia con = "my"</h4>
+	<p class="texto" name="mytexto">Mi text</p>
+	<p class="texto" name="mycasa">Mi Casa</p>
+
+	<h4>Estilo por name que finalize con = "my"</h4>
+	<p class="texto" name=textomy>Mi text</p>
+	<p class="texto" name ="casamy">Mi Casa</p>
+
+	<h4>Estilo que tenga en su name la palabra = "mi"</h4>
+	<p class="texto" name=textomi>Mi text</p>
+	<p class="texto" name ="casami">Mi Casa</p>
+
+	<h2>Estilo referenciando pseudo-clases</h2>
+	
+	<div id="wrapper">
+	    <p class="mitexto1">Mi texto1</p>
+	    <!-- <a style="display: block;" href="#">Enlace</a> -->
+	    <p class="mitexto2">Mi texto2</p>
+	    <p class="mitexto3">Mi texto3</p>
+	    <p class="mitexto4">Mi texto4</p>
+	</div>
+
+	<h2>Nuevos selectores</h2>
+	<p>
+		Hay algunos selectores más que fueron agregados o que ahora son considerados parte de
+		CSS3 y pueden ser útiles para nuestros diseños. Estos selectores usan los símbolos > , + y ~
+		para especificar la relación entre elementos.
+	</p>
+
+	<p class="letras">mi texto</p>
+	<p class="letras1">mi texto</p>
+	<p>mi texto</p>
+	<p>mi texto</p>
+	<a href="#">Hola Mundo</a>
+</body>
+</html>

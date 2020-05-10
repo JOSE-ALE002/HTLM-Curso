@@ -1,0 +1,23 @@
+table{
+	border: 2px solid black;
+	border-collapse: collapse; /*Separate and collapse*/
+	padding: 20px;
+}
+
+table td{
+	border: 2px solid black;
+	padding: 20px;
+}
+
+table tr:hover{
+	background: grey;
+}
+
+table td:hover{
+	background: black;
+	color: white;
+}
+
+table td:active{
+	background: orange;
+}

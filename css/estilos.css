@@ -1,0 +1,44 @@
+/*SELECTOR DE TODA LA PAGINA*/
+body{
+	background: pink;
+	color: purple;
+	font-size: 16px;
+}
+
+div{
+	background: black;
+	color: white;
+	width: 100%;
+	text-align: justify;
+}
+
+/* EN LOS PARRAFOS CON LA CLASE YELLOW SERAN COLOR AZUL*/
+p .yellow{ 
+	color : blue;
+}
+
+/*CAMBIO DE COLOR A ETIQUETAS QUE TENGAN UN LINK ESPECIFICO*/
+a[href="http://www.falconmasters.com"]{
+	color: green;
+	font-size: 20px;
+}
+
+/*SELECTOR UNIVERSAL
+* {
+	margin: 0;
+	padding: 0; 
+	color: red;
+}*/
+
+/*SELECTORES DE ETIQUETA
+h1{
+	color: red;
+}
+*/
+
+/* PARRAFOS CON ETIQUETAS NEGRITAS SERAN COLOR MORADO
+p b{
+	color: purple;
+}*/
+
+
